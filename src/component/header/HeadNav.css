@@ -1,0 +1,12 @@
+.appHeader {
+  width: 80%;
+  margin: 0 auto;
+  height: 100px;
+  font-size: 24px;
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: center;
+}
+.logOut {
+  display: none !important;
+}

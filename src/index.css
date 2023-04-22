@@ -1,0 +1,25 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --black: #272727;
+  --gray: #747474;
+  --orange: #ff652f;
+  --yellow: #ffe400;
+  --blue: #14a76c;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+.body-content {
+  row-gap: 50px;
+
+  margin-top: 20px;
+}
+.logOut {
+  display: none;
+}
