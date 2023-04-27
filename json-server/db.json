@@ -1,5 +1,5 @@
 {
-  "movies" : [
+  "movies": [
     {
       "Title": "Avatar",
       "Year": "2009",
@@ -16,13 +16,15 @@
       "Awards": "Won 3 Oscars. Another 80 wins & 121 nominations.",
       "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjEyOTYyMzUxNl5BMl5BanBnXkFtZTcwNTg0MTUzNA@@._V1_SX1500_CR0,0,1500,999_AL_.jpg",
       "Metascore": "83",
+      "VideoURL": "https://youtu.be/gRIx7ByM-Fs?list=PL4Gr5tOAPttLOY9IrWVjJlv4CtkYI5cI_",
+      "Video":"https://vimeo.com/821166502",
+
       "imdbRating": "7.9",
       "imdbVotes": "890,617",
       "imdbID": "tt0499549",
       "Type": "movie",
       "Response": "True",
       "Images": [
-        
         "https://images-na.ssl-images-amazon.com/images/M/MV5BNzM2MDk3MTcyMV5BMl5BanBnXkFtZTcwNjg0MTUzNA@@._V1_SX1777_CR0,0,1777,999_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTY2ODQ3NjMyMl5BMl5BanBnXkFtZTcwODg0MTUzNA@@._V1_SX1777_CR0,0,1777,999_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTMxOTEwNDcxN15BMl5BanBnXkFtZTcwOTg0MTUzNA@@._V1_SX1777_CR0,0,1777,999_AL_.jpg",
@@ -31,8 +33,11 @@
     },
     {
       "Title": "I Am Legend",
+      "VideoURL": "https://youtu.be/gRIx7ByM-Fs?list=PL4Gr5tOAPttLOY9IrWVjJlv4CtkYI5cI_",
       "Year": "2007",
       "Rated": "PG-13",
+      "Video":"https://youtu.be/Ytl_G_an5Fk",
+
       "Released": "14 Dec 2007",
       "Runtime": "101 min",
       "Genre": "Drama, Horror, Sci-Fi",
@@ -43,7 +48,7 @@
       "Language": "English",
       "Country": "USA",
       "Awards": "9 wins & 21 nominations.",
-      "Poster":  "https://images-na.ssl-images-amazon.com/images/M/MV5BMTI0NTI4NjE3NV5BMl5BanBnXkFtZTYwMDA0Nzc4._V1_.jpg",
+      "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTI0NTI4NjE3NV5BMl5BanBnXkFtZTYwMDA0Nzc4._V1_.jpg",
       "Metascore": "65",
       "imdbRating": "7.2",
       "imdbVotes": "533,874",
@@ -51,7 +56,6 @@
       "Type": "movie",
       "Response": "True",
       "Images": [
-       
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTIwMDg2MDU4M15BMl5BanBnXkFtZTYwMTA0Nzc4._V1_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTc5MDM1OTU5OV5BMl5BanBnXkFtZTYwMjA0Nzc4._V1_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTA0MTI2NjMzMzFeQTJeQWpwZ15BbWU2MDMwNDc3OA@@._V1_.jpg"
@@ -60,6 +64,9 @@
     {
       "Title": "300",
       "Year": "2006",
+      "Video":"https://youtu.be/Ytl_G_an5Fk",
+
+      "VideoURL": "https://youtu.be/gRIx7ByM-Fs?list=PL4Gr5tOAPttLOY9IrWVjJlv4CtkYI5cI_",
       "Rated": "R",
       "Released": "09 Mar 2007",
       "Runtime": "117 min",
@@ -79,13 +86,15 @@
       "Type": "movie",
       "Response": "True",
       "Images": [
-        
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQwNTgyNTMzNF5BMl5BanBnXkFtZTcwNDA2NTIyMw@@._V1_SX1777_CR0,0,1777,935_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTc0MjQzOTEwMV5BMl5BanBnXkFtZTcwMzE2NTIyMw@@._V1_SX1777_CR0,0,1777,947_AL_.jpg"
       ]
     },
     {
       "Title": "The Avengers",
+      "Video":"https://youtu.be/Ytl_G_an5Fk",
+
+      "VideoURL": "https://youtu.be/gRIx7ByM-Fs?list=PL4Gr5tOAPttLOY9IrWVjJlv4CtkYI5cI_",
       "Year": "2012",
       "Rated": "PG-13",
       "Released": "04 May 2012",
@@ -105,8 +114,7 @@
       "imdbID": "tt0848228",
       "Type": "movie",
       "Response": "True",
-       "Images": [
-        
+      "Images": [
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMjE1MzEzMjcyM15BMl5BanBnXkFtZTcwNDM4ODY3Nw@@._V1_SX1777_CR0,0,1777,999_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMjMwMzM2MTg1M15BMl5BanBnXkFtZTcwNjM4ODY3Nw@@._V1_SX1777_CR0,0,1777,999_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ4NzM2Mjc5MV5BMl5BanBnXkFtZTcwMTkwOTY3Nw@@._V1_SX1777_CR0,0,1777,999_AL_.jpg",
@@ -116,8 +124,11 @@
     {
       "Title": "The Wolf of Wall Street",
       "Year": "2013",
+      "Video":"https://youtu.be/Ytl_G_an5Fk",
+
       "Rated": "R",
       "Released": "25 Dec 2013",
+      "VideoURL": "https://youtu.be/gRIx7ByM-Fs?list=PL4Gr5tOAPttLOY9IrWVjJlv4CtkYI5cI_",
       "Runtime": "180 min",
       "Genre": "Biography, Comedy, Crime",
       "Director": "Martin Scorsese",
@@ -127,8 +138,7 @@
       "Language": "English, French",
       "Country": "USA",
       "Awards": "Nominated for 5 Oscars. Another 35 wins & 154 nominations.",
-      "Poster":         "https://images-na.ssl-images-amazon.com/images/M/MV5BNDIwMDIxNzk3Ml5BMl5BanBnXkFtZTgwMTg0MzQ4MDE@._V1_SX1500_CR0,0,1500,999_AL_.jpg",
-
+      "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BNDIwMDIxNzk3Ml5BMl5BanBnXkFtZTgwMTg0MzQ4MDE@._V1_SX1500_CR0,0,1500,999_AL_.jpg",
       "Metascore": "75",
       "imdbRating": "8.2",
       "imdbVotes": "786,985",
@@ -145,7 +155,10 @@
     {
       "Title": "Interstellar",
       "Year": "2014",
+      "Video":"https://youtu.be/Ytl_G_an5Fk",
+
       "Rated": "PG-13",
+      "VideoURL": "https://youtu.be/gRIx7ByM-Fs?list=PL4Gr5tOAPttLOY9IrWVjJlv4CtkYI5cI_",
       "Released": "07 Nov 2014",
       "Runtime": "169 min",
       "Genre": "Adventure, Drama, Sci-Fi",
@@ -156,8 +169,7 @@
       "Language": "English",
       "Country": "USA, UK",
       "Awards": "Won 1 Oscar. Another 39 wins & 134 nominations.",
-      "Poster":         "https://images-na.ssl-images-amazon.com/images/M/MV5BMjA3NTEwOTMxMV5BMl5BanBnXkFtZTgwMjMyODgxMzE@._V1_SX1500_CR0,0,1500,999_AL_.jpg",
-
+      "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjA3NTEwOTMxMV5BMl5BanBnXkFtZTgwMjMyODgxMzE@._V1_SX1500_CR0,0,1500,999_AL_.jpg",
       "Metascore": "74",
       "imdbRating": "8.6",
       "imdbVotes": "937,412",
@@ -174,7 +186,10 @@
     {
       "Title": "Game of Thrones",
       "Year": "2011–",
+      "Video":"https://youtu.be/Ytl_G_an5Fk",
+
       "Rated": "TV-MA",
+      "VideoURL": "https://youtu.be/KPLWWIOCOOQ",
       "Released": "17 Apr 2011",
       "Runtime": "56 min",
       "Genre": "Adventure, Drama, Fantasy",
@@ -185,7 +200,7 @@
       "Language": "English",
       "Country": "USA, UK",
       "Awards": "Won 1 Golden Globe. Another 185 wins & 334 nominations.",
-      "Poster":  "https://images-na.ssl-images-amazon.com/images/M/MV5BNDc1MGUyNzItNWRkOC00MjM1LWJjNjMtZTZlYWIxMGRmYzVlXkEyXkFqcGdeQXVyMzU3MDEyNjk@._V1_SX1777_CR0,0,1777,999_AL_.jpg",
+      "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BNDc1MGUyNzItNWRkOC00MjM1LWJjNjMtZTZlYWIxMGRmYzVlXkEyXkFqcGdeQXVyMzU3MDEyNjk@._V1_SX1777_CR0,0,1777,999_AL_.jpg",
       "Metascore": "N/A",
       "imdbRating": "9.5",
       "imdbVotes": "1,046,830",
@@ -194,7 +209,6 @@
       "totalSeasons": "7",
       "Response": "True",
       "Images": [
-       
         "https://images-na.ssl-images-amazon.com/images/M/MV5BZjZkN2M5ODgtMjQ2OC00ZjAxLWE1MjMtZDE0OTNmNGM0NWEwXkEyXkFqcGdeQXVyNjUxNzgwNTE@._V1_SX1777_CR0,0,1777,999_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMDk4Y2Y1MDAtNGVmMC00ZTlhLTlmMmQtYjcyN2VkNzUzZjg2XkEyXkFqcGdeQXVyNjUxNzgwNTE@._V1_SX1777_CR0,0,1777,999_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BNjZjNWIzMzQtZWZjYy00ZTkwLWJiMTYtOWRkZDBhNWJhY2JmXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_SX1777_CR0,0,1777,999_AL_.jpg",
@@ -205,6 +219,9 @@
       "Title": "Vikings",
       "Year": "2013–",
       "Rated": "TV-14",
+      
+      "VideoURL": "https://youtu.be/gRIx7ByM-Fs?list=PL4Gr5tOAPttLOY9IrWVjJlv4CtkYI5cI_",
+      "Video":"https://youtu.be/Ytl_G_an5Fk",
       "Released": "03 Mar 2013",
       "Runtime": "44 min",
       "Genre": "Action, Drama, History",
@@ -224,7 +241,6 @@
       "totalSeasons": "5",
       "Response": "True",
       "Images": [
-       
         "https://images-na.ssl-images-amazon.com/images/M/MV5BNzU2NDcxODMyOF5BMl5BanBnXkFtZTgwNDAzOTI2ODE@._V1_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMjMzMzIzOTU2M15BMl5BanBnXkFtZTgwODMzMTkyODE@._V1_SY1000_SX1500_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ2NTQ2MDA3NF5BMl5BanBnXkFtZTgwODkxMDUxODE@._V1_SY1000_SX1500_AL_.jpg",
@@ -234,7 +250,10 @@
     {
       "Title": "Gotham",
       "Year": "2014–",
+      "Video":"https://youtu.be/Ytl_G_an5Fk",
+
       "Rated": "TV-14",
+      "VideoURL": "https://youtu.be/gRIx7ByM-Fs?list=PL4Gr5tOAPttLOY9IrWVjJlv4CtkYI5cI_",
       "Released": "01 Aug 2014",
       "Runtime": "42 min",
       "Genre": "Action, Crime, Drama",
@@ -254,7 +273,6 @@
       "totalSeasons": "3",
       "Response": "True",
       "Images": [
-        
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMjA5OTExMTIwNF5BMl5BanBnXkFtZTgwMjI5NDMwMDI@._V1_SY1000_SX1500_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTA3MDY2NjA3MzBeQTJeQWpwZ15BbWU4MDU0MDkzODgx._V1_SX1499_CR0,0,1499,999_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMjM3MzYzNDgzOV5BMl5BanBnXkFtZTgwMjQwOTM4ODE@._V1_SY1000_CR0,0,1498,1000_AL_.jpg",
@@ -265,6 +283,9 @@
       "Title": "Power",
       "Year": "2014–",
       "Rated": "TV-MA",
+      "Video":"https://youtu.be/Ytl_G_an5Fk",
+
+      "VideoURL": "https://youtu.be/gRIx7ByM-Fs?list=PL4Gr5tOAPttLOY9IrWVjJlv4CtkYI5cI_",
       "Released": "N/A",
       "Runtime": "50 min",
       "Genre": "Crime, Drama",
@@ -283,8 +304,7 @@
       "Type": "series",
       "totalSeasons": "3",
       "Response": "True",
-       "Images": [
-        
+      "Images": [
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTcyMjA0MzczNV5BMl5BanBnXkFtZTgwNTIyODA5NTE@._V1_SY1000_SX1500_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTk0MTI0NzQ2NV5BMl5BanBnXkFtZTgwMDkxODA5NTE@._V1_SY1000_SX1500_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ4Mzk1ODcxM15BMl5BanBnXkFtZTgwNDQyODA5NTE@._V1_SY1000_SX1500_AL_.jpg",
@@ -294,6 +314,9 @@
     {
       "Title": "Narcos",
       "Year": "2015–",
+      "Video":"https://youtu.be/Ytl_G_an5Fk",
+
+      "VideoURL": "https://youtu.be/gRIx7ByM-Fs?list=PL4Gr5tOAPttLOY9IrWVjJlv4CtkYI5cI_",
       "Rated": "TV-MA",
       "Released": "28 Aug 2015",
       "Runtime": "49 min",
@@ -313,8 +336,7 @@
       "Type": "series",
       "totalSeasons": "2",
       "Response": "True",
-       "Images": [
-        
+      "Images": [
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMjIxMDkyOTEyNV5BMl5BanBnXkFtZTgwNjY3Mjc3OTE@._V1_SY1000_SX1500_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMjA2NDUwMTU2NV5BMl5BanBnXkFtZTgwNTI1Mzc3OTE@._V1_SY1000_CR0,0,1499,1000_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BODA1NjAyMTQ3Ml5BMl5BanBnXkFtZTgwNjI1Mzc3OTE@._V1_SY1000_CR0,0,1499,1000_AL_.jpg",
@@ -325,6 +347,9 @@
       "Title": "Breaking Bad",
       "Year": "2008–2013",
       "Rated": "TV-14",
+      "Video":"https://youtu.be/Ytl_G_an5Fk",
+
+      "VideoURL": "https://youtu.be/gRIx7ByM-Fs?list=PL4Gr5tOAPttLOY9IrWVjJlv4CtkYI5cI_",
       "Released": "20 Jan 2008",
       "Runtime": "49 min",
       "Genre": "Crime, Drama, Thriller",
@@ -335,8 +360,7 @@
       "Language": "English, Spanish",
       "Country": "USA",
       "Awards": "Won 2 Golden Globes. Another 132 wins & 218 nominations.",
-      "Poster":         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTgyMzI5NDc5Nl5BMl5BanBnXkFtZTgwMjM0MTI2MDE@._V1_SY1000_CR0,0,1498,1000_AL_.jpg",
-
+      "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTgyMzI5NDc5Nl5BMl5BanBnXkFtZTgwMjM0MTI2MDE@._V1_SY1000_CR0,0,1498,1000_AL_.jpg",
       "Metascore": "N/A",
       "imdbRating": "9.5",
       "imdbVotes": "889,883",
@@ -355,7 +379,10 @@
       "ComingSoon": true,
       "Title": "Doctor Strange",
       "Year": "2016",
+      "Video":"https://youtu.be/Ytl_G_an5Fk",
+
       "Rated": "N/A",
+      "VideoURL": "https://youtu.be/gRIx7ByM-Fs?list=PL4Gr5tOAPttLOY9IrWVjJlv4CtkYI5cI_",
       "Released": "04 Nov 2016",
       "Runtime": "N/A",
       "Genre": "Action, Adventure, Fantasy",
@@ -366,8 +393,7 @@
       "Language": "English",
       "Country": "USA",
       "Awards": "N/A",
-      "Poster":         "https://images-na.ssl-images-amazon.com/images/M/MV5BMjM3ODc1ODI5Ml5BMl5BanBnXkFtZTgwODMzMDY3OTE@._V1_.jpg",
-
+      "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjM3ODc1ODI5Ml5BMl5BanBnXkFtZTgwODMzMDY3OTE@._V1_.jpg",
       "Metascore": "N/A",
       "imdbRating": "N/A",
       "imdbVotes": "N/A",
@@ -383,8 +409,11 @@
       "ComingSoon": true,
       "Title": "Rogue One: A Star Wars Story",
       "Year": "2016",
+      "Video":"https://youtu.be/Ytl_G_an5Fk",
+
       "Rated": "N/A",
       "Released": "16 Dec 2016",
+      "VideoURL": "https://youtu.be/gRIx7ByM-Fs?list=PL4Gr5tOAPttLOY9IrWVjJlv4CtkYI5cI_",
       "Runtime": "N/A",
       "Genre": "Action, Adventure, Sci-Fi",
       "Director": "Gareth Edwards",
@@ -394,8 +423,7 @@
       "Language": "English",
       "Country": "USA",
       "Awards": "1 nomination.",
-      "Poster":         "https://images-na.ssl-images-amazon.com/images/M/MV5BMjE3MzA4Nzk3NV5BMl5BanBnXkFtZTgwNjAxMTc1ODE@._V1_SX1777_CR0,0,1777,744_AL_.jpg",
-
+      "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjE3MzA4Nzk3NV5BMl5BanBnXkFtZTgwNjAxMTc1ODE@._V1_SX1777_CR0,0,1777,744_AL_.jpg",
       "Metascore": "N/A",
       "imdbRating": "N/A",
       "imdbVotes": "N/A",
@@ -413,7 +441,10 @@
       "ComingSoon": true,
       "Title": "Assassin's Creed",
       "Year": "2016",
+      "Video":"https://youtu.be/Ytl_G_an5Fk",
+
       "Rated": "N/A",
+      "VideoURL": "https://youtu.be/gRIx7ByM-Fs?list=PL4Gr5tOAPttLOY9IrWVjJlv4CtkYI5cI_",
       "Released": "21 Dec 2016",
       "Runtime": "N/A",
       "Genre": "Action, Adventure, Fantasy",
@@ -424,8 +455,7 @@
       "Language": "English",
       "Country": "UK, France, USA, Hong Kong",
       "Awards": "N/A",
-      "Poster":         "https://images-na.ssl-images-amazon.com/images/M/MV5BN2EyYzgyOWEtNTY2NS00NjRjLWJiNDYtMWViMjg5MWZjYjgzXkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_.jpg",
-
+      "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BN2EyYzgyOWEtNTY2NS00NjRjLWJiNDYtMWViMjg5MWZjYjgzXkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_.jpg",
       "Metascore": "N/A",
       "imdbRating": "N/A",
       "imdbVotes": "N/A",
@@ -442,6 +472,9 @@
       "ComingSoon": true,
       "Title": "Luke Cage",
       "Year": "2016–",
+      "Video":"https://youtu.be/Ytl_G_an5Fk",
+
+      "VideoURL": "https://youtu.be/gRIx7ByM-Fs?list=PL4Gr5tOAPttLOY9IrWVjJlv4CtkYI5cI_",
       "Rated": "TV-MA",
       "Released": "30 Sep 2016",
       "Runtime": "55 min",
@@ -453,8 +486,7 @@
       "Language": "English",
       "Country": "USA",
       "Awards": "N/A",
-      "Poster":         "https://images-na.ssl-images-amazon.com/images/M/MV5BMjMxNjc1NjI0NV5BMl5BanBnXkFtZTgwNzA0NzY0ODE@._V1_SY1000_CR0,0,1497,1000_AL_.jpg",
-
+      "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjMxNjc1NjI0NV5BMl5BanBnXkFtZTgwNzA0NzY0ODE@._V1_SY1000_CR0,0,1497,1000_AL_.jpg",
       "Metascore": "N/A",
       "imdbRating": "N/A",
       "imdbVotes": "N/A",
@@ -470,106 +502,149 @@
       ]
     }
   ],
-  "carousel":[
+  "carousel": [
     {
-      "id" : "1",
-        "imgUlr":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjI1MDg3NjY2OF5BMl5BanBnXkFtZTgwNDE1NDU4OTE@._V1_SY1000_CR0,0,1497,1000_AL_.jpg ",
-        "imgDes": "carouselImg01",
-        "Plot": "Given superstrength and durability by a sabotaged experiment, a wrongly accused man escapes prison to become a superhero for hire."
+      "id": "1",
+      "imgUlr": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjI1MDg3NjY2OF5BMl5BanBnXkFtZTgwNDE1NDU4OTE@._V1_SY1000_CR0,0,1497,1000_AL_.jpg ",
+      "imgDes": "carouselImg01",
+      "Plot": "Given superstrength and durability by a sabotaged experiment, a wrongly accused man escapes prison to become a superhero for hire."
     },
     {
       "id": "2",
-      "imgUlr":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjMwMzM2MTg1M15BMl5BanBnXkFtZTcwNjM4ODY3Nw@@._V1_SX1777_CR0,0,1777,999_AL_.jpg",
+      "imgUlr": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjMwMzM2MTg1M15BMl5BanBnXkFtZTcwNjM4ODY3Nw@@._V1_SX1777_CR0,0,1777,999_AL_.jpg",
       "imgDes": "carouselImg02",
       "Plot": "A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's financial future."
     },
     {
-      "id" : "3",
+      "id": "3",
       "imgUlr": "https://images-na.ssl-images-amazon.com/images/M/MV5BNzU2NDcxODMyOF5BMl5BanBnXkFtZTgwNDAzOTI2ODE@._V1_.jpg",
       "imgDes": "carouselImg03",
       "Plot": "Based on the true story of Jordan Belfort, from his rise to a wealthy stock-broker living the high life to his fall involving crime, corruption and the federal government."
     },
     {
-      "id" : "4",
-      "imgUlr":  "https://images-na.ssl-images-amazon.com/images/M/MV5BNzM2MDk3MTcyMV5BMl5BanBnXkFtZTcwNjg0MTUzNA@@._V1_SX1777_CR0,0,1777,999_AL_.jpg",
+      "id": "4",
+      "imgUlr": "https://images-na.ssl-images-amazon.com/images/M/MV5BNzM2MDk3MTcyMV5BMl5BanBnXkFtZTcwNjg0MTUzNA@@._V1_SX1777_CR0,0,1777,999_AL_.jpg",
       "imgDes": "carouselImg04",
       "Plot": "Earth's mightiest heroes must come together and learn to fight as a team if they are to stop the mischievous Loki and his alien army from enslaving humanity."
     }
-  ], 
-  
-    "tv_shows": [
-      {
-        "id": 1,
-        "actors":"Phanh Lee, Đình Tú, NSUT Chí Trung, NS Vân Dung",
-        "title": "Gạo Nếp Gạo Tẻ",
-        "episode_count": 20,
-        "image_url": "https://toplist.vn/images/800px/gao-nep-gao-te-250045.jpg"
-      },
-      {
-        "id": 2,
-        "actors":"Nguyễn Sanh, Võ Minh Lâm, Mỹ Linh, Thành Nhân",
-        "title": "Hậu Duệ Mặt Trời",
-        "episode_count": 25,
-        "image_url": "https://toplist.vn/images/800px/hau-due-mat-troi-250047.jpg"
-      },
-      {
-        "id": 3,
-        "actors":" NSUT Chiều Xuân, Thanh Tú, Lưu Đê Ly, Mạnh Trường, Huỳnh Anh",
-        "title": "Quỳnh Búp Bê",
-        "episode_count": 30,
-        "image_url": "https://toplist.vn/images/800px/quynh-bup-be-250048.jpg"
-      },
-      {
-        "id": 4,
-        "actors":"Nhã Phương, Lương Thế Thành, Nhan Phúc Vinh, Bảo Thanh, Chí Thiện",
-        "title": "Cả một đời ân oán",
-        "episode_count": 15,
-        "image_url": "https://toplist.vn/images/800px/ca-mot-doi-an-oan-250049.jpg"
-      },
-      {
-        "id": 5,
-        "actors":"Quốc Trường, Nhan Phúc Vinh, Kim Tuyến",
-        "title": "Đánh Tráo Số Phận",
-        "episode_count": 18,
-        "image_url": "https://toplist.vn/images/800px/danh-trao-so-phan-250050.jpg"
-      },
-      {
-        "id": 6,
-        "actors":"Nhung Kate, Trương Nam Thành, Lý Anh Tuấn, Lan Phương",
-        "title": "Mộng Phù Hoa",
-        "episode_count": 65,
-        "image_url": "https://toplist.vn/images/800px/mong-phu-hoa-250052.jpg"
-      },
-      {
-        "id": 7,
-        "actors":"NSUT Mỹ Uyên, Hồng Đăng, Hồng Diễm, Mạnh Trường, Lan Phương, Huỳnh Anh",
-        "title": "Ngày Ấy Mình Đã Yêu",
-        "episode_count": 35,
-        "image_url": "https://toplist.vn/images/800px/ngay-ay-minh-da-yeu-250053.jpg"
-      },
-      {
-        "id": 8,
-        "actors":"Phương Oanh, NSUT Nguyễn Hải, Doãn Quốc Đam, Thu Quỳnh, Thanh Hương, Minh Tiệp, Trọng Lân",
-        "title": "Chạy trốn thanh xuân",
-        "episode_count": 15,
-        "image_url": "https://toplist.vn/images/800px/ngay-ay-minh-da-yeu-250053.jpg"
-      },
-            {
-        "id": 9,
-        "actors":" Khả Ngân, Song Luân, Hữu Vi, Cao Thái Hà",
-        "title": "Phận làm dâu",
-        "episode_count": 26,
-        "image_url": "https://toplist.vn/images/800px/phan-lam-dau-250055.jpg"
-      },
-      {
-        "id": 10,
-        "actors":"Lê Huỳnh Thúy Ngân, NSUT Minh Đức, NSND Hồng Vân, Trung Dũng",
-        "title": "Yêu thì ghét thôi",
-        "episode_count": 33,
-        "image_url": "https://toplist.vn/images/800px/yeu-thi-ghet-thoi-250057.jpg"
-      }
+  ],
+  "tv_shows": [
+    {
+      "id": 1,
+      "actors": "Phanh Lee, Đình Tú, NSUT Chí Trung, NS Vân Dung",
+      "title": "Gạo Nếp Gạo Tẻ",
+      "episode_count": 20,
+      "image_url": "https://toplist.vn/images/800px/gao-nep-gao-te-250045.jpg"
+    },
+    {
+      "id": 2,
+      "actors": "Nguyễn Sanh, Võ Minh Lâm, Mỹ Linh, Thành Nhân",
+      "title": "Hậu Duệ Mặt Trời",
+      "episode_count": 25,
+      "image_url": "https://toplist.vn/images/800px/hau-due-mat-troi-250047.jpg"
+    },
+    {
+      "id": 3,
+      "actors": " NSUT Chiều Xuân, Thanh Tú, Lưu Đê Ly, Mạnh Trường, Huỳnh Anh",
+      "title": "Quỳnh Búp Bê",
+      "episode_count": 30,
+      "image_url": "https://toplist.vn/images/800px/quynh-bup-be-250048.jpg"
+    },
+    {
+      "id": 4,
+      "actors": "Nhã Phương, Lương Thế Thành, Nhan Phúc Vinh, Bảo Thanh, Chí Thiện",
+      "title": "Cả một đời ân oán",
+      "episode_count": 15,
+      "image_url": "https://toplist.vn/images/800px/ca-mot-doi-an-oan-250049.jpg"
+    },
+    {
+      "id": 5,
+      "actors": "Quốc Trường, Nhan Phúc Vinh, Kim Tuyến",
+      "title": "Đánh Tráo Số Phận",
+      "episode_count": 18,
+      "image_url": "https://toplist.vn/images/800px/danh-trao-so-phan-250050.jpg"
+    },
+    {
+      "id": 6,
+      "actors": "Nhung Kate, Trương Nam Thành, Lý Anh Tuấn, Lan Phương",
+      "title": "Mộng Phù Hoa",
+      "episode_count": 65,
+      "image_url": "https://toplist.vn/images/800px/mong-phu-hoa-250052.jpg"
+    },
+    {
+      "id": 7,
+      "actors": "NSUT Mỹ Uyên, Hồng Đăng, Hồng Diễm, Mạnh Trường, Lan Phương, Huỳnh Anh",
+      "title": "Ngày Ấy Mình Đã Yêu",
+      "episode_count": 35,
+      "image_url": "https://toplist.vn/images/800px/ngay-ay-minh-da-yeu-250053.jpg"
+    },
+    {
+      "id": 8,
+      "actors": "Phương Oanh, NSUT Nguyễn Hải, Doãn Quốc Đam, Thu Quỳnh, Thanh Hương, Minh Tiệp, Trọng Lân",
+      "title": "Chạy trốn thanh xuân",
+      "episode_count": 15,
+      "image_url": "https://toplist.vn/images/800px/ngay-ay-minh-da-yeu-250053.jpg"
+    },
+    {
+      "id": 9,
+      "actors": " Khả Ngân, Song Luân, Hữu Vi, Cao Thái Hà",
+      "title": "Phận làm dâu",
+      "episode_count": 26,
+      "image_url": "https://toplist.vn/images/800px/phan-lam-dau-250055.jpg"
+    },
+    {
+      "id": 10,
+      "actors": "Lê Huỳnh Thúy Ngân, NSUT Minh Đức, NSND Hồng Vân, Trung Dũng",
+      "title": "Yêu thì ghét thôi",
+      "episode_count": 33,
+      "image_url": "https://toplist.vn/images/800px/yeu-thi-ghet-thoi-250057.jpg"
+    }
+  ],
+  "users": [
+    {
+      "email": "abcxyz@gmail.com",
+      "password": "123456",
+      "confirm": "123456",
+      "nickname": "akanji",
+      "residence": [
+        "zhejiang",
+        "hangzhou",
+        "xihu"
+      ],
+      "prefix": "86",
+      "phone": "456213213213",
+      "intro": "ádas",
+      "gender": "female",
+      "captcha": "ádads",
+      "agreement": true,
+      "timeRegister": "Mon, 24 Apr 2023 09:19:42 GMT",
+      "isAdmin": false,
+      "primaryId": "7f305c54-76df-4ed4-8085-b688f54ef15e",
+      "id": 1
+    },
+    {
+      "email": "phutran.jp1@gmail.com",
+      "password": "mNmpFF5HM39NkFK",
+      "confirm": "mNmpFF5HM39NkFK",
+      "nickname": "lamgico123",
+      "residence": [
+        "zhejiang",
+        "hangzhou",
+        "xihu"
+      ],
+      "prefix": "86",
+      "phone": "456213213213",
+      "intro": "ssdasd",
+      "gender": "female",
+      "captcha": "sda",
+      "agreement": true,
+      "timeRegister": "Wed, 26 Apr 2023 01:11:44 GMT",
+      "isAdmin": false,
+      "primaryId": "5f33a3e0-b699-4e8b-9e3a-7d77b3a0104b",
+      "id": 2
+    }
+  ],
+  "watch-history":[
     
-    ]
-  
-  
+  ]
 }

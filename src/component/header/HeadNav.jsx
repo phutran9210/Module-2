@@ -1,46 +1,64 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Menu, Modal } from "antd";
+import { Routes, Route, NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 import {
   ShoppingCartOutlined,
+  SearchOutlined,
   HomeOutlined,
   HomeFilled,
+  UserOutlined,
 } from "@ant-design/icons";
 import "antd/dist/reset.css";
 import "./HeadNav.css";
 import Login from "../login";
 import SignIn from "../signin";
-
+import AvatarUser from "../../Avatar";
+import AdminPage from "../admin";
 const HeadNav = () => {
-  const [visible, setVisible] = useState(false);
-  const [modalType, setModalType] = useState(null);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const handleLoginSuccess = () => {
-    setIsLoggedIn(true);
-  };
-  const handleLogout = () => {
-    setIsLoggedIn(false);
-  };
-  const showModal = (type) => {
-    setModalType(type);
-    setVisible(true);
-  };
+  const intinitalValue = useSelector((state) => state.auth.loggedIn);
+  const [loggedIn, setLoggedIn] = useState(intinitalValue);
+  useEffect(() => {
+    checkLoginStatus();
+  }, []);
 
-  const handleOk = () => {
-    setVisible(false);
+  const checkLoginStatus = () => {
+    const loggedUser = localStorage.getItem("loggedUser");
+    if (loggedUser) {
+      setLoggedIn(true);
+    }
   };
+  const accountMenuItems = loggedIn
+    ? [
+        {
+          className: "logOut",
+          label: "Đăng xuất",
+          key: "signOut",
+        },
+      ]
+    : [
+        {
+          className: "signIn",
+          label: <NavLink to={"/signup"}>Đăng ký</NavLink>,
+          key: "signUp",
+        },
+        {
+          className: "logIn",
+          label: <NavLink to={"/signin"}>Đăng nhập</NavLink>,
+          key: "signIn",
+        },
+      ];
 
-  const handleCancel = () => {
-    setVisible(false);
-  };
   return (
-    <div>
+    <div className="appMenu">
       <Menu
-        className="appMenu"
+        className="menuHead"
         mode="horizontal"
         items={[
           {
-            label: "Home",
-            key: "home",
+            label: <NavLink to={"/"}>Home</NavLink>,
+            key: "/",
             icon: <HomeFilled />,
           },
           {
@@ -87,36 +105,23 @@ const HeadNav = () => {
             label: "Phim trẻ em",
             key: "phimTreEm",
           },
+          ...accountMenuItems,
           {
-            className: "signIn",
-            label: "Đăng ký",
-            key: "signUp",
-            onClick: () => showModal("signup"),
+            label: <SearchOutlined />,
+            key: "search",
           },
           {
-            className: "logIn",
-            label: "Đăng nhập",
-            key: "signIn",
-            onClick: () => showModal("signIn"),
-          },
-
-          {
-            className: "logOut",
-            label: "Đăng xuất",
-            key: "signOut",
-            onClick: () => handleLogout(),
+            label: (
+              <NavLink to={"/admin"}>
+                <AvatarUser />
+              </NavLink>
+            ),
+            key: "user",
           },
         ]}
       />
 
-      <Modal
-        title={modalType === "signup" ? "Đăng ký" : "Đăng nhập"}
-        open={visible}
-        onOk={handleOk}
-        onCancel={handleCancel}
-      >
-        {modalType === "signup" ? <Login /> : <SignIn />}
-      </Modal>
+      <Routes></Routes>
     </div>
   );
 };

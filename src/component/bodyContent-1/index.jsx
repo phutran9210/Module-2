@@ -4,9 +4,16 @@ import { Card, List } from "antd";
 import "../bodyContent.css";
 import axios from "axios";
 
+import { setSelectedMovieId } from "../../redux/actions";
+import { useDispatch } from "react-redux";
+import { Navigate, useNavigate } from "react-router";
+
 const { Meta } = Card;
 const BodyContent1 = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [movieData, setMovieData] = useState([]);
+
   const api = axios.create({
     baseURL: "http://localhost:3005",
   });
@@ -21,7 +28,12 @@ const BodyContent1 = () => {
   useEffect(() => {
     getPosts();
   }, []);
-  console.log(movieData);
+  const handleClick = (movieData) => {
+    dispatch(setSelectedMovieId(movieData.imdbID));
+    localStorage.setItem("selectedMovieId", movieData.imdbID);
+    navigate("/play");
+  };
+
   return (
     <div id="bodycontent1" className="body-content">
       <h2>PHIM HÀNH ĐỘNG</h2>
@@ -44,6 +56,7 @@ const BodyContent1 = () => {
                     src={movieData.Poster}
                   />
                 }
+                onClick={() => handleClick(movieData, movieData.imdbID)}
               >
                 <Meta title={movieData.Title} description={movieData.Actors} />
               </Card>
