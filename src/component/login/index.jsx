@@ -111,7 +111,8 @@ const Login = () => {
       const newUser = {
         ...values,
         timeRegister: utcTime,
-        isAdmin: false,
+        role: "user",
+        status: "avtive",
         primaryId: primaryId,
       };
 

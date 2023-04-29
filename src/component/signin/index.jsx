@@ -14,6 +14,7 @@ const SignIn = (values) => {
   const [showSuccsessNotification, setShowSuccessNotification] =
     useState(false);
   const [showAlert, setShowAlert] = useState(false);
+
   const api = axios.create({
     baseURL: "http://localhost:3005",
   });
@@ -38,8 +39,10 @@ const SignIn = (values) => {
     const foundUser = dataUsers.find(
       (user) => user.email === emailUser && user.password === passwordUser
     );
+
     if (foundUser) {
       dispatch(loginUser(foundUser));
+
       setShowSuccessNotification(true);
     } else {
       setShowAlert(true);

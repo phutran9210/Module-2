@@ -67,7 +67,7 @@ const PlayVideos = ({ movie }) => {
       <Title level={2}>Chi tiết phim </Title>
       <div>
         {selectedMovie.Images.map((image, index) => (
-          <Row>
+          <Row key={index}>
             <Col
               xs={{ span: 24, offset: 0 }}
               sm={{ span: 22, offset: 1 }}

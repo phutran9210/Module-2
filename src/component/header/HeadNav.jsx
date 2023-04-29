@@ -12,10 +12,9 @@ import {
 } from "@ant-design/icons";
 import "antd/dist/reset.css";
 import "./HeadNav.css";
-import Login from "../login";
-import SignIn from "../signin";
+
 import AvatarUser from "../../Avatar";
-import AdminPage from "../admin";
+
 const HeadNav = () => {
   const intinitalValue = useSelector((state) => state.auth.loggedIn);
   const [loggedIn, setLoggedIn] = useState(intinitalValue);

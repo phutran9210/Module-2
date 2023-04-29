@@ -21,7 +21,7 @@ const BodyContent2 = () => {
   useEffect(() => {
     getPosts();
   }, []);
-  console.log(movieData);
+
   return (
     <div id="bodycontent2" className="body-content">
       <h2>PHIM BỘ VIỆT NAM</h2>

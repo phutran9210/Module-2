@@ -9,6 +9,7 @@ export const loginUser = (user) => {
     });
   };
 };
+
 export const logoutUser = () => {
   return (dispatch) => {
     localStorage.removeItem("loggedUser");
@@ -25,14 +26,25 @@ export const setApiData = (data) => {
     payload: data,
   };
 };
+
 export const fetchApiData = () => {
   return async (dispatch) => {
     try {
       const response = await axios.get("http://localhost:3005/movies");
       dispatch(setApiData(response.data));
-      console.log(response.data);
     } catch (error) {
       console.error("loi khi lay api", error);
+    }
+  };
+};
+
+export const fetchApiDataUser = () => {
+  return async (dispatch) => {
+    try {
+      const response = await axios.get("http://localhost:3005/users");
+      dispatch(setApiData(response.data));
+    } catch (error) {
+      console.log("loi khi lay userData", error);
     }
   };
 };

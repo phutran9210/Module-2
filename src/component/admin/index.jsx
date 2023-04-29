@@ -1,94 +1,79 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
-  LaptopOutlined,
-  NotificationOutlined,
+  MenuFoldOutlined,
+  PayCircleOutlined,
   UserOutlined,
+  VideoCameraOutlined,
+  MenuUnfoldOutlined,
 } from "@ant-design/icons";
-import { Breadcrumb, Layout, Menu, theme } from "antd";
-import "./AdminPage.css";
-const { Header, Content, Sider } = Layout;
-const items1 = ["1", "2", "3"].map((key) => ({
-  key,
-  label: `nav ${key}`,
-}));
-const items2 = [UserOutlined, LaptopOutlined, NotificationOutlined].map(
-  (icon, index) => {
-    const key = String(index + 1);
-    return {
-      key: `sub${key}`,
-      icon: React.createElement(icon),
-      label: `subnav ${key}`,
-      children: new Array(4).fill(null).map((_, j) => {
-        const subKey = index * 4 + j + 1;
-        return {
-          key: subKey,
-          label: `option${subKey}`,
-        };
-      }),
-    };
-  }
-);
+import { Button, Layout, Menu, theme } from "antd";
+import { useState } from "react";
+const { Header, Sider, Content } = Layout;
+import UserTable from "./user";
+
 const AdminPage = () => {
+  const [collapsed, setCollapsed] = useState(false);
   const {
     token: { colorBgContainer },
   } = theme.useToken();
+
   return (
     <Layout>
-      <Header className="header">
+      <Sider trigger={null} collapsible collapsed={collapsed}>
         <div className="logo" />
         <Menu
           theme="dark"
-          mode="horizontal"
-          defaultSelectedKeys={["2"]}
-          items={items1}
+          mode="inline"
+          defaultSelectedKeys={["1"]}
+          items={[
+            {
+              key: "1",
+              icon: <UserOutlined />,
+              label: "User",
+            },
+            {
+              key: "2",
+              icon: <VideoCameraOutlined />,
+              label: "Movies",
+            },
+            {
+              key: "3",
+              icon: <PayCircleOutlined />,
+              label: "Store",
+            },
+          ]}
         />
-      </Header>
+      </Sider>
       <Layout>
-        <Sider
-          width={200}
+        <Header
           style={{
+            padding: 0,
             background: colorBgContainer,
           }}
         >
-          <Menu
-            mode="inline"
-            defaultSelectedKeys={["1"]}
-            defaultOpenKeys={["sub1"]}
+          <Button
+            type="text"
+            icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+            onClick={() => setCollapsed(!collapsed)}
             style={{
-              height: "100%",
-              borderRight: 0,
+              fontSize: "16px",
+              width: 64,
+              height: 64,
             }}
-            items={items2}
           />
-        </Sider>
-        <Layout
+        </Header>
+        <Content
           style={{
-            padding: "0 24px 24px",
+            margin: "24px 16px",
+            padding: 24,
+            minHeight: "100vh",
+            background: colorBgContainer,
           }}
         >
-          <Breadcrumb
-            style={{
-              margin: "16px 0",
-            }}
-          >
-            <Breadcrumb.Item>Home</Breadcrumb.Item>
-            <Breadcrumb.Item>List</Breadcrumb.Item>
-            <Breadcrumb.Item>App</Breadcrumb.Item>
-          </Breadcrumb>
-          <Content
-            style={{
-              padding: 24,
-              margin: 0,
-              minHeight: 280,
-              background: colorBgContainer,
-            }}
-          >
-            Content
-          </Content>
-        </Layout>
+          <UserTable />
+        </Content>
       </Layout>
     </Layout>
   );
 };
-
 export default AdminPage;

@@ -9,6 +9,7 @@ import SignIn from "./component/signin";
 import Login from "./component/login";
 import Footer from "./component/footer";
 import PlayVideos from "./playVideo/PlayVideos";
+import AdminPage from "./component/admin";
 const App = () => {
   const HomePage = () => (
     <>
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="/signin" element={<SignIn />}></Route>
         <Route path="/signup" element={<Login />}></Route>
         <Route path="/play" element={<PlayVideos />}></Route>
+        <Route path="/admin" element={<AdminPage />}></Route>
       </Routes>
     </div>
   );
