@@ -53,6 +53,7 @@ const SignIn = (values) => {
   return (
     <div className="signInForm">
       <Form
+        form={form}
         name="basic"
         labelCol={{ span: 8 }}
         wrapperCol={{ span: 16 }}

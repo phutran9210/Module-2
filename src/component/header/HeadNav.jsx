@@ -119,8 +119,6 @@ const HeadNav = () => {
           },
         ]}
       />
-
-      <Routes></Routes>
     </div>
   );
 };

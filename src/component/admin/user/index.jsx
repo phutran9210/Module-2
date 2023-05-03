@@ -1,11 +1,25 @@
-import { Form, Radio, Space, Switch, Table, Descriptions } from "antd";
+import {
+  Form,
+  Radio,
+  Space,
+  Switch,
+  Table,
+  Descriptions,
+  Spin,
+  Alert,
+} from "antd";
 import { useState, useEffect } from "react";
 import { DownOutlined } from "@ant-design/icons";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchApiDataUser } from "../../../redux/actions";
+import {
+  fetchUsers,
+  updatePartialUser,
+} from "../../../redux/actions/userAction";
 import "./usersTable.css";
 import EditUser from "./EditUser";
-import axios from "axios";
+
+import SpinAlert from "../../notification/SpinAlert";
 const columns = [
   {
     title: "Email",
@@ -63,7 +77,7 @@ const UserTable = () => {
   const [editUser, setEditUser] = useState(null);
   const [editModalVisible, setEditModalVisible] = useState(false);
   const [bordered, setBordered] = useState(false);
-  const [loading, setLoading] = useState(false);
+
   const [size, setSize] = useState("large");
   const [expandable, setExpandable] = useState(defaultExpandable);
   const [showTitle, setShowTitle] = useState(false);
@@ -77,50 +91,39 @@ const UserTable = () => {
   const [ellipsis, setEllipsis] = useState(false);
   const [yScroll, setYScroll] = useState(false);
   const [xScroll, setXScroll] = useState();
-  const [data, setData] = useState([]);
+  const [userUpdated, setUserUpdated] = useState(false);
+
   const dispatch = useDispatch();
-  const users = useSelector((state) => state.apiUser.data);
+
+  const users = useSelector((state) => state.user.users);
+  const loading = useSelector((state) => state.user.loading);
+  const error = useSelector((state) => state.user.error);
 
   useEffect(() => {
-    dispatch(fetchApiDataUser());
-  }, [dispatch]);
+    dispatch(fetchUsers());
+    console.log("dang chạy");
+    setUserUpdated(false);
+  }, [userUpdated]);
 
-  useEffect(() => {
-    console.log(users);
-    const dataWithKeys = users.map((user) => {
-      return { ...user, key: user.id };
-    });
-    setData(dataWithKeys);
-  }, [users]);
-
-  const updateUser = async (userId, updatedData) => {
-    try {
-      const response = await axios.patch(
-        ` http://localhost:3005/users/${userId}`,
-        updatedData
-      );
-    } catch (error) {
-      console.log("update lỗi", error);
-    }
-  };
   const handleEdit = (record) => {
     setEditUser(record);
     setEditModalVisible(true);
   };
   const handleEditOk = (values) => {
     const userId = editUser.id;
-    updateUser(userId, values);
+
+    dispatch(updatePartialUser(userId, values));
     setEditModalVisible(false);
+    setUserUpdated(true);
   };
   const handleEditCancel = () => {
     setEditModalVisible(false);
   };
+
   const handleBorderChange = (enable) => {
     setBordered(enable);
   };
-  const handleLoadingChange = (enable) => {
-    setLoading(enable);
-  };
+
   const handleSizeChange = (e) => {
     setSize(e.target.value);
   };
@@ -191,7 +194,7 @@ const UserTable = () => {
   }
   const tableProps = {
     bordered,
-    loading,
+
     size,
     expandable,
     title: showTitle ? defaultTitle : undefined,
@@ -213,9 +216,7 @@ const UserTable = () => {
         <Form.Item label="Bordered">
           <Switch checked={bordered} onChange={handleBorderChange} />
         </Form.Item>
-        <Form.Item label="loading">
-          <Switch checked={loading} onChange={handleLoadingChange} />
-        </Form.Item>
+
         <Form.Item label="Title">
           <Switch checked={showTitle} onChange={handleTitleChange} />
         </Form.Item>
@@ -290,21 +291,31 @@ const UserTable = () => {
           </Radio.Group>
         </Form.Item>
       </Form>
-      <Table
-        {...tableProps}
-        pagination={{
-          position: [top, bottom],
-        }}
-        columns={tableColumns}
-        dataSource={hasData ? data : []}
-        scroll={scroll}
-      />
-      <EditUser
-        visible={editModalVisible}
-        user={editUser}
-        onCancel={handleEditCancel}
-        onOk={handleEditOk}
-      />
+      <>
+        {loading && (
+          <div style={{ textAlign: "center", marginBottom: "1rem" }}>
+            <Spin tip="Đang tải dữ liệu người dùng..." />
+          </div>
+        )}
+
+        <Table
+          {...tableProps}
+          pagination={{
+            position: [top, bottom],
+          }}
+          columns={tableColumns}
+          dataSource={
+            hasData ? users.map((user) => ({ ...user, key: user.id })) : []
+          }
+          scroll={scroll}
+        />
+        <EditUser
+          visible={editModalVisible}
+          user={editUser}
+          onCancel={handleEditCancel}
+          onOk={handleEditOk}
+        />
+      </>
     </>
   );
 };

@@ -10,13 +10,13 @@ import { Button, Layout, Menu, theme } from "antd";
 import { useState } from "react";
 const { Header, Sider, Content } = Layout;
 import UserTable from "./user";
-
+import VideoTable from "./managerVideos";
 const AdminPage = () => {
   const [collapsed, setCollapsed] = useState(false);
   const {
     token: { colorBgContainer },
   } = theme.useToken();
-
+  const [currentComponent, setCurrentComponent] = useState("user");
   return (
     <Layout>
       <Sider trigger={null} collapsible collapsed={collapsed}>
@@ -24,20 +24,23 @@ const AdminPage = () => {
         <Menu
           theme="dark"
           mode="inline"
-          defaultSelectedKeys={["1"]}
+          defaultSelectedKeys={["user"]}
+          onClick={({ key }) => {
+            setCurrentComponent(key);
+          }}
           items={[
             {
-              key: "1",
+              key: "user",
               icon: <UserOutlined />,
               label: "User",
             },
             {
-              key: "2",
+              key: "managerMovies",
               icon: <VideoCameraOutlined />,
               label: "Movies",
             },
             {
-              key: "3",
+              key: "store",
               icon: <PayCircleOutlined />,
               label: "Store",
             },
@@ -70,7 +73,8 @@ const AdminPage = () => {
             background: colorBgContainer,
           }}
         >
-          <UserTable />
+          {currentComponent === "user" && <UserTable />}
+          {currentComponent === "managerMovies" && <VideoTable />}
         </Content>
       </Layout>
     </Layout>
