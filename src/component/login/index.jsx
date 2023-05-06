@@ -13,7 +13,7 @@ import axios from "axios";
 import SuccessNotification from "../notification/SuccessNotification";
 import "./registerForm.css";
 import { v4 as uuidv4 } from "uuid";
-
+import { useNavigate } from "react-router";
 const { Option } = Select;
 const residences = [
   {
@@ -81,6 +81,7 @@ const tailFormItemLayout = {
 };
 const Login = () => {
   const [form] = Form.useForm();
+  const navigate = useNavigate();
   const [showSuccsessNotification, setShowSuccessNotification] =
     useState(false);
   const [dataUsers, setDataUsers] = useState([]);
@@ -140,8 +141,16 @@ const Login = () => {
     </Form.Item>
   );
 
+  const handleResetForm = () => {
+    form.resetFields();
+  };
+  const handleCancel = () => {
+    navigate("/");
+  };
+
   return (
     <div className="registerForm">
+      <h2>ĐĂNG KÍ THÔNG TIN NGƯỜI DÙNG</h2>
       <Form
         {...formItemLayout}
         form={form}
@@ -334,6 +343,20 @@ const Login = () => {
         <Form.Item {...tailFormItemLayout}>
           <Button type="primary" htmlType="submit">
             Đăng ký
+          </Button>
+          <Button
+            type="default"
+            onClick={handleResetForm}
+            style={{ marginLeft: 8 }}
+          >
+            Reset form
+          </Button>
+          <Button
+            type="default"
+            onClick={handleCancel}
+            style={{ marginLeft: 8 }}
+          >
+            Hủy
           </Button>
         </Form.Item>
       </Form>

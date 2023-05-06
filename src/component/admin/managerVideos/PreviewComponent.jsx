@@ -24,7 +24,10 @@ const PreviewComponent = ({ data, visible, onCancel }) => {
         <p>Ngôn ngữ : {data.Language}</p>
         <p>Quốc gia : {data.Country}</p>
         <p>Giải thưởng : {data.Awards}</p>
-        <p>Ảnh Poster : {data.Poster}</p>
+        <p>Ảnh Poster : </p>
+        <ul>
+          <Image width={200} src={data.Poster} />
+        </ul>
         <p>Video Trailer : {data.VideoURL}</p>
         <ReactPlayer
           className="react-player"
@@ -57,7 +60,8 @@ const PreviewComponent = ({ data, visible, onCancel }) => {
         <p>Kiểm duyệt : {data.Rated}</p>
         <p>Thời lượng phim : {data.Runtime}</p>
         <p>Số tập : {data.NumberOfFilm}</p>
-        <p>Hiển thị :{data.isVisible} </p>
+        <p>Hiển thị :{data.isVisible ? "Có" : "Không"} </p>
+
         <p>ID phim : {data.imdbID}</p>
         <p>Hình ảnh:</p>
         <ul>

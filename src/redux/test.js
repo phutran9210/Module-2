@@ -1,0 +1,41 @@
+const a = "7f305c54-76df-4ed4-8085-b688f54ef15e";
+const b = [
+  {
+    email: "abcxyz@gmail.com",
+    password: "123456",
+    confirm: "123456",
+    nickname: "aaa",
+    residence: "2222",
+    prefix: "86",
+    phone: "456213213213",
+    intro: "ádas",
+    gender: "3d",
+    captcha: "ádads",
+    agreement: true,
+    timeRegister: "Mon, 24 Apr 2023 09:19:42 GMT",
+    isAdmin: false,
+    primaryId: "7f305c54-76df-4ed4-8085-b688f54ef15e",
+    role: "user",
+    id: 1,
+  },
+  {
+    email: "phutran.jp1@gmail.com",
+    password: "123456",
+    confirm: "mNmpFF5HM39NkFK",
+    nickname: "aaaaaaa",
+    residence: "adasd",
+    prefix: "86",
+    phone: "123456789",
+    intro: "ssdasd",
+    gender: "nam",
+    captcha: "sda",
+    agreement: true,
+    timeRegister: "Wed, 26 Apr 2023 01:11:44 GMT",
+    isAdmin: false,
+    primaryId: "5f33a3e0-b699-4e8b-9e3a-7d77b3a0104b",
+    role: "admin",
+    id: 2,
+  },
+];
+const c = b.find((event) => event.primaryId === a);
+console.log(c);

@@ -54,7 +54,7 @@ const MultipleUpload = ({ fileList, onChange }) => {
         onPreview={handlePreview}
         onChange={handleUploadChange}
         multiple={true}
-        beforeUpload={() => false}
+        // beforeUpload={() => false}
       >
         {fileList.length >= 8 ? null : uploadButton}
       </Upload>

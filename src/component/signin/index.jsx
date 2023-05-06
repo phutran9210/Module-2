@@ -46,7 +46,6 @@ const SignIn = (values) => {
       setShowSuccessNotification(true);
     } else {
       setShowAlert(true);
-      console.log("sao ko chay");
     }
   };
 

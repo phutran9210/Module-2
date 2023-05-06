@@ -11,3 +11,14 @@
 .img {
   padding: 10px;
 }
+.player-controls {
+  text-align: right;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-right: 130px;
+}
+.player-controls button {
+  font-size: 20px;
+  height: 50px;
+  padding: 0 auto;
+}

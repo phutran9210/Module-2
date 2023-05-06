@@ -24,18 +24,19 @@ const handleMouseLeave = (e) => {
   e.target.style.transform = "scale(1)";
 };
 const { Meta } = Card;
-const BodyContent2 = () => {
+const BodyContent3 = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [scrollPosition, setScrollPosition] = useState(0);
   useEffect(() => {
     dispatch(fetchApiData());
+    console.log("run???");
   }, []);
 
   const dataMovie = useSelector((state) => state.apiData.data);
   const actionMovie = dataMovie.filter((movie) => {
     return movie.Genre.some((tag) => {
-      return tag === "Thriller";
+      return tag === "Crime";
     });
   });
 
@@ -54,8 +55,8 @@ const BodyContent2 = () => {
   };
 
   return (
-    <div id="bodycontent2" className="body-content">
-      <h2>PHIM GIẬT GÂN</h2>
+    <div id="bodycontent3" className="body-content">
+      <h2>PHIM GIẢ TƯỞNG</h2>
       <Button
         icon={<LeftOutlined />}
         type="primary"
@@ -100,4 +101,4 @@ const BodyContent2 = () => {
     </div>
   );
 };
-export default BodyContent2;
+export default BodyContent3;

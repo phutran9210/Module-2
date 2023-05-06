@@ -2,11 +2,10 @@ import React, { useEffect, useState } from "react";
 import { RightOutlined, LeftOutlined } from "@ant-design/icons";
 import { Card, Button } from "antd";
 import "../bodyContent.css";
-import axios from "axios";
-import "./bodyContent-1.css";
-import { setSelectedMovieId } from "../../redux/actions";
-import { useDispatch } from "react-redux";
-import { Navigate, useNavigate } from "react-router";
+
+import { useDispatch, useSelector } from "react-redux";
+import { fetchApiData } from "../../redux/actions";
+import { useNavigate } from "react-router";
 
 const btnStyleNavi = {
   backgroundColor: "rgba(0, 0, 0, 0.5)",
@@ -28,29 +27,23 @@ const { Meta } = Card;
 const BodyContent1 = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [movieData, setMovieData] = useState([]);
   const [scrollPosition, setScrollPosition] = useState(0);
-  const visibleMovies = 8;
-  const maxPosition = (movieData.length - visibleMovies) * 260;
-  const api = axios.create({
-    baseURL: "http://localhost:3005",
-  });
-  const getPosts = async () => {
-    try {
-      const response = await api.get("/movies");
-      setMovieData(response.data);
-    } catch (error) {
-      console.error("Error getting posts:", error);
-    }
-  };
   useEffect(() => {
-    getPosts();
+    dispatch(fetchApiData());
   }, []);
 
-  const handleClick = (selectedMovie) => {
-    dispatch(setSelectedMovieId(selectedMovie.imdbID));
-    localStorage.setItem("selectedMovieId", selectedMovie.imdbID);
-    navigate("/play");
+  const dataMovie = useSelector((state) => state.apiData.data);
+  const actionMovie = dataMovie.filter((movie) => {
+    return movie.Genre.some((tag) => {
+      return tag === "Action";
+    });
+  });
+
+  const visibleMovies = 8;
+  const maxPosition = (actionMovie.length - visibleMovies) * 260;
+
+  const handleClick = (movieId) => {
+    navigate(`/play/${movieId}`);
   };
   const handleScroll = (direction) => {
     const scrollAmount = 260;
@@ -68,29 +61,19 @@ const BodyContent1 = () => {
         type="primary"
         onClick={() => handleScroll(-1)}
         style={btnStyleNavi}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
+        // onMouseLeave={handleMouseLeave}
       ></Button>
-      <div
-        className="horizontal-scroll"
-        style={{ transform: `translateX(-${scrollPosition}px)` }}
-      >
-        {movieData.map((movie) => (
+      <div className="horizontal-scroll">
+        {actionMovie.map((movie) => (
           <Card
-            key={movie.imdbID}
+            key={movie.id}
             className="custom-card"
             hoverable
             style={{
               width: 240,
             }}
-            cover={
-              <img
-                key={movie.imdbID}
-                alt={movie.imdbVotes}
-                src={movie.Poster}
-              />
-            }
-            onClick={() => handleClick(movie)}
+            cover={<img alt={movie.imdbVotes} src={movie.Poster} />}
+            onClick={() => handleClick(movie.id)}
           >
             <Meta title={movie.Title} description={movie.Actors} />
           </Card>
@@ -101,8 +84,7 @@ const BodyContent1 = () => {
         type="primary"
         onClick={() => handleScroll(1)}
         style={btnStyleNavi}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
+        // onMouseLeave={handleMouseLeave}
       ></Button>
     </div>
   );

@@ -1,53 +1,60 @@
 import React, { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
-import { useSelector, useDispatch } from "react-redux";
-import { Descriptions, Image, Typography, Button, Row, Col } from "antd";
-import { fetchApiData } from "../redux/actions";
-import { setSelectedMovieId } from "../redux/actions";
+
+import {
+  Descriptions,
+  Image,
+  Typography,
+  Button,
+  Row,
+  Col,
+  message,
+} from "antd";
+import axios from "axios";
+import { useParams } from "react-router";
 import "./playVideo.css";
 const { Title } = Typography;
-const PlayVideos = ({ movie }) => {
+const PlayVideos = () => {
   const [isTrailer, setIstrailer] = useState(true);
   const [isPlaying, setIsPlaying] = useState(true);
-  const dispatch = useDispatch();
-  const movieData = useSelector((state) => state.apiData.data);
+  const { movieId } = useParams();
+  const [movie, setMovie] = useState(null);
+
   const toggleTrailer = () => {
     setIstrailer(!isTrailer);
   };
   useEffect(() => {
-    const storedLocal = localStorage.getItem("selectedMovieId");
-    if (storedLocal) {
-      dispatch(setSelectedMovieId(storedLocal));
+    async function fetchMovie() {
+      try {
+        const response = await axios.get(
+          `http://localhost:3005/movies/${movieId}`
+        );
+        setMovie(response.data);
+      } catch (error) {
+        message.error("Error fetching movie:", error);
+      }
     }
-    dispatch(fetchApiData());
-  }, [dispatch]);
-  const selectedMovieId = useSelector((state) => state.selectedMovieId);
-  const selectedMovie = movieData.find(
-    (movie) => movie.imdbID === selectedMovieId
-  );
-
-  if (!selectedMovie) {
+    fetchMovie();
+  }, [movieId]);
+  console.log(movieId);
+  if (!movie) {
     return <div>Loading...</div>;
   }
-  console.log(selectedMovie.Video);
-  const videoUlr = isTrailer ? selectedMovie.VideoURL : selectedMovie.Video;
+
+  const videoUlr = isTrailer ? movie.VideoURL : movie.Videos;
 
   return (
     <div className="watch-movie">
       <h1>
-        {selectedMovie.Title} ({selectedMovie.Year})
+        {movie.Title} ({movie.Year})
       </h1>
 
       <Descriptions title="Thông tin phim">
-        <Descriptions.Item label="Director">
-          {selectedMovie.Director}
-        </Descriptions.Item>
-        <Descriptions.Item label="Actors">
-          {selectedMovie.Actors}
-        </Descriptions.Item>
-        <Descriptions.Item label="Plot">{selectedMovie.Plot}</Descriptions.Item>
+        <Descriptions.Item label="Director">{movie.Director}</Descriptions.Item>
+        <Descriptions.Item label="Actors">{movie.Actors}</Descriptions.Item>
+        <Descriptions.Item label="Plot">{movie.Plot}</Descriptions.Item>
         <Descriptions.Item label="IMDb Rating">
-          {selectedMovie.imdbRating}
+          {movie.imdbRating}
         </Descriptions.Item>
       </Descriptions>
       <div className="player-wrapper">
@@ -59,6 +66,8 @@ const PlayVideos = ({ movie }) => {
           controls
           playing={true}
         />
+      </div>
+      <div className="player-controls">
         <Button type="primary" onClick={toggleTrailer}>
           {isTrailer ? "Xem phim" : "Xem trên lơ"}
         </Button>
@@ -66,7 +75,7 @@ const PlayVideos = ({ movie }) => {
       <hr />
       <Title level={2}>Chi tiết phim </Title>
       <div>
-        {selectedMovie.Images.map((image, index) => (
+        {movie.Images.map((image, index) => (
           <Row key={index}>
             <Col
               xs={{ span: 24, offset: 0 }}

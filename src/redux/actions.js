@@ -2,10 +2,10 @@ import axios from "axios";
 
 export const loginUser = (user) => {
   return (dispatch) => {
-    localStorage.setItem("loggedUser", JSON.stringify(user.primaryId));
+    localStorage.setItem("loggedUser", user.primaryId);
     dispatch({
       type: "LOGIN_USER",
-      payload: user.primaryId,
+      payload: user,
     });
   };
 };
@@ -53,5 +53,32 @@ export const setSelectedMovieId = (movieId) => {
   return {
     type: "SET_SELECTED_MOVIE_ID",
     payload: movieId,
+  };
+};
+
+export const restoreUser = () => {
+  return async (dispatch) => {
+    const primaryID = localStorage.getItem("loggedUser");
+
+    if (primaryID) {
+      try {
+        const response = await axios.get("http://localhost:3005/users");
+
+        const users = response.data;
+
+        const user = users.find((user) => user.primaryId === primaryID);
+
+        if (user) {
+          dispatch({
+            type: "LOGIN_USER",
+            payload: user,
+          });
+        } else {
+          console.error("Error: primaryId not found in users");
+        }
+      } catch (error) {
+        console.error("Error: ", error.message);
+      }
+    }
   };
 };

@@ -8,12 +8,14 @@ import {
   Upload,
   Switch,
   Select,
+  message,
 } from "antd";
 import PreviewComponent from "./PreviewComponent";
 import { useEffect, useState } from "react";
 import MultipleUpload from "../../uploadForm/MultipleUpload";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchApiData } from "../../../redux/actions";
+import { addMovieUpdated } from "../../../redux/actions/managerMovies";
 const { Option } = Select;
 
 const { TextArea } = Input;
@@ -50,7 +52,7 @@ const AddMovies = () => {
 
   const handlePreview = () => {
     const values = form.getFieldsValue();
-    console.log("Preview values:", values);
+    // console.log("Preview values:", values);
     setPreviewData(values);
     setPreviewVisible(true);
   };
@@ -71,7 +73,12 @@ const AddMovies = () => {
   }, [form]);
 
   const handleFinish = (values) => {
-    console.log("Form data: ", values);
+    if (dataMovie.some((movie) => movie.imdbID === values.imdbID)) {
+      message.error("ID đã tồn tại, vui lòng chọn ID khác");
+      return;
+    }
+    dispatch(addMovieUpdated(values));
+    handleReset();
   };
   return (
     <>
@@ -101,9 +108,9 @@ const AddMovies = () => {
         >
           <Input />
         </Form.Item>
-        <Form.Item label="Năm sản xuất" name="Year">
+        {/* <Form.Item label="Năm sản xuất" name="Year">
           <DatePicker picker="year" />
-        </Form.Item>
+        </Form.Item> */}
         <Form.Item label="Phát hành" name="Released">
           <DatePicker />
         </Form.Item>
@@ -135,14 +142,20 @@ const AddMovies = () => {
             }
             tokenSeparators={[","]}
           >
-            <Option value="action">Hành động</Option>
-            <Option value="comedy">Hài hước</Option>
-            <Option value="drama">Tâm lý</Option>
-            <Option value="horror">Kinh dị</Option>
-            <Option value="sci-fi">Khoa học viễn tưởng</Option>
-            <Option value="romance">Lãng mạn</Option>
-            <Option value="documentary">Tài liệu</Option>
-            <Option value="animation">Hoạt hình</Option>
+            <Option value="Action">Hành động</Option>
+            <Option value="Comedy">Hài hước</Option>
+            <Option value="Drama">Tâm lý</Option>
+            <Option value="Horror">Kinh dị</Option>
+            <Option value="Sci-Fi">Khoa học viễn tưởng</Option>
+            <Option value="Romance">Lãng mạn</Option>
+            <Option value="Documentary">Tài liệu</Option>
+            <Option value="Animation">Hoạt hình</Option>
+            <Option value="Adventure">Phiêu lưu</Option>
+            <Option value="Thriller">Giật gân</Option>
+            <Option value="Biography">Khoa học</Option>
+            <Option value="Crime">Tội phạm</Option>
+            <Option value="Fantasy">Fantasy</Option>
+            <Option value="History">Lịch sử</Option>
           </Select>
         </Form.Item>
         <Form.Item label="Ngôn Ngữ" name="Language">
@@ -154,7 +167,7 @@ const AddMovies = () => {
         <Form.Item label="Giải thưởng" name="Awards">
           <Input />
         </Form.Item>
-        <Form.Item label="Ảnh Poster" name="PosterInput">
+        <Form.Item label="Ảnh Poster" name="Poster">
           <Input />
         </Form.Item>
         <Form.Item
@@ -219,7 +232,12 @@ const AddMovies = () => {
         <Form.Item label="Số tập" name="NumberOfFilm">
           <InputNumber />
         </Form.Item>
-        <Form.Item valuePropName="checked" label="Hiển thị" name="isVisible">
+        <Form.Item
+          valuePropName="checked"
+          label="Hiển thị"
+          name="isVisible"
+          initialValue={true}
+        >
           <Switch />
         </Form.Item>
 
